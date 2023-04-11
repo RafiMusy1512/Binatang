@@ -1,0 +1,53 @@
+package Binatang;
+
+public class Binatang {
+    protected String nama;
+    protected int umur;
+    
+    public Binatang(String nama, int umur) {
+        this.nama = nama;
+        this.umur = umur;
+    }
+    
+    public void bergerak() {
+        System.out.println("Binatang sedang bergerak");
+    }
+    
+    public static void main(String[] args) {
+        // membuat objek Anjing
+        Anjing myDog = new Anjing("Snoopy", 3, "Beagle");
+        myDog.gonggong();
+        myDog.bergerak();
+
+        // membuat objek Ikan
+        Ikan myFish = new Ikan("Nemo", 1, "Clownfish");
+        myFish.berenang();
+        myFish.bergerak();
+    }
+}
+
+class Anjing extends Binatang {
+    protected String ras;
+    
+    public Anjing(String nama, int umur, String ras) {
+        super(nama, umur);
+        this.ras = ras;
+    }
+    
+    public void gonggong() {
+        System.out.println("Anjing " + nama + " (" + ras + ") sedang menggonggong");
+    }
+}
+
+class Ikan extends Binatang {
+    protected String jenis;
+    
+    public Ikan(String nama, int umur, String jenis) {
+        super(nama, umur);
+        this.jenis = jenis;
+    }
+    
+    public void berenang() {
+        System.out.println("Ikan " + nama + " (" + jenis + ") sedang berenang");
+    }
+}
