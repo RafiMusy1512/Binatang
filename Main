@@ -1,0 +1,18 @@
+package Binatang;
+
+import Binatang.Anjing;
+import Binatang.Ikan;
+
+public class Main {
+    public static void main(String[] args) {
+        // membuat objek Anjing
+        Anjing myDog = new Anjing("Snoopy", 3, "Beagle");
+        myDog.gonggong();
+        myDog.bergerak();
+
+        // membuat objek Ikan
+        Ikan myFish = new Ikan("Nemo", 1, "Clownfish");
+        myFish.berenang();
+        myFish.bergerak();
+    }
+}
